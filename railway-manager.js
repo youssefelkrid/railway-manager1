@@ -30,10 +30,10 @@ let trips = [
 ];
 
 // ----------- Liste des tickets -----------
-let tickets = [];
+let tickets = [] ;
 let nextTicketId = 1;
 
-// ----------- Fonction : afficher tous les trajets -----------
+// ----------- Fonction : afficher tous les trajets ---------
 function afficherTrajets() {
     console.log("");
     console.log("=== TRAJETS DISPONIBLES ===");
