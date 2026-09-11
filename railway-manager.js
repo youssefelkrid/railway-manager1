@@ -62,3 +62,33 @@ function afficherTrajets() {
         );
     }
 }
+// 2. Chercher un trajet
+function chercherTrajet(id) {
+    for (let i = 0; i < trips.length; i++) {
+        if (trips[i].id === id) {
+            return trips[i];
+        }
+    }
+    return null;
+}
+
+
+// 3. Chercher une place libre
+function chercherPlaceLibre(tripId) {
+    for (let place = 1; place <= 50; place++) {
+        let placeOccupee = false;
+        for (let i = 0; i < tickets.length; i++) {
+            if (
+                tickets[i].tripId === tripId &&
+                tickets[i].seatNumber === place
+            ) {
+                placeOccupee = true;
+                break;
+            }
+        }
+        if (placeOccupee === false) {
+            return place;
+        }
+    }
+    return null;
+}
